@@ -1,7 +1,13 @@
-@media(min-width: 1440px){
+@media(min-width: 1400px){
   .descriptions{
+    &_right{
+      &::before{
+        width: 140%;
+      }
+    }
     img.imgleft {
-      max-width: 535px;
+      max-width: 480px;
+      left: 58px;
     }
     &_logos{
       column-gap: 100px;
