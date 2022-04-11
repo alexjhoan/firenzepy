@@ -1,6 +1,6 @@
 /*----------------------------banner-header-------------------------------*/
 .banner{
-  background-image:url(../../assets/images/header/header-d.jpg);
+  background-image: url(../../assets/images/header/header-d.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -90,6 +90,34 @@
       width: 100%;
       height: 40px;
       margin-top: 10px;
+    }
+  }
+}
+/*----------------------------Ubicacion1-------------------------------*/
+.ubicacion1{
+  padding-top:80px;
+  padding-bottom: 70px;
+  &_left{
+    text-align: center;
+    &_img{
+      max-width: 400px;
+      width: 100%;
+    }
+  }
+  &_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 61px;
+    &_flor{
+      max-width: 218px;
+      width: 100%;
+    }
+    &_mano{
+      position: absolute;
+      max-width: 400px;
+      right: 0;
+      bottom:120px;
     }
   }
 }

@@ -72,4 +72,25 @@
   .banner{
     background-image: url(../../assets/images/header/header-m.jpg);
   }
+  .ubicacion1{
+    padding-top:43px;
+    padding-bottom: 15px;
+    &_right{
+    justify-content: center;
+    padding-top: 30px;
+    }
+    &_mano{
+      max-width: 400px;
+      width: 100%;
+      margin-top: 15px;
+      margin-left: auto;
+    }
+  }
+}
+@media (max-width: 575.98px) {
+  .ubicacion1{
+    &_mano{
+      max-width: 300px;
+    }
+  }
 }
