@@ -131,17 +131,25 @@
 }
 /*----------------------------Ubicacion3----------------------------------*/
 .ubicacion3{
-  display: none;
   img.leaf {
-      position: absolute;
+    position: absolute;
+    width: 100%;
+    max-width: 150px;
+    top: 0;
+    left: 0;
+  }
+  &_title{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    img{
+      max-width: 37px;
       width: 100%;
-      max-width: 200px;
-      top: 0;
-      right: 0;
+      margin-right: 10px;
     }
-    h2.h3{
-      margin-bottom: 20px;
-    }
+  }
+
     &_item{
       display: flex;
       flex-direction: row;
@@ -168,7 +176,10 @@
       }
     }
     &_right{
-      position: relative;
+      position: absolute;
+      right: 0;
+      max-width: 725px;
+      padding-right:0;
       .active{
         span:hover *{
           opacity: 1;
@@ -191,20 +202,20 @@
         font-weight: 600;
         font-size: 0.6rem;
         position: absolute;
-        max-width: 85px;
+        max-width: 95px;
         text-align: center;
         &::after {
-          opacity: 0;
+          opacity: 1;
           position: absolute;
           content: "";
-          width: 17px;
-          height: 20px;
+          width: 14px;
+          height: 19px;
           background-repeat: no-repeat;
           background-size: contain;
           background-position: center;
           z-index: 2;
           bottom: 35px;
-          right: 24px;
+          right: 22px;
         }
         &:hover::after{
           transform: translateY(-3px);
@@ -215,105 +226,103 @@
     .educations{
       span{
         &::after {
-          background-image: url(../../assets/images/locations/escuelas.svg);
+          background-image: url(../../assets/images/ubicacion/pin-educacion.svg);
         }
         b{
           opacity: 0;
-          background-color: #c90022;
+          background-color: $primary;
         }
         &:first-child{
-          bottom: 30%;
-          right: 31.5%;
+          &::after{
+            right: 30px;
+          }
+          bottom: 15%;
+          left: 6%;
         }
         &:nth-child(2){
-          top: 25.5%;
-          right: 23.5%;
-        }
-        &:nth-child(3){
-          top: 13%;
-          right: 15%;
+          &::after{
+            right: 40px;
+          }
+          top: 16.5%;
+          right: 37%;
         }
         &:last-child{
-          bottom: 35%;
-          right: 3.8%;
+          &::after{
+            right: 17px;
+          }
+          bottom: 40%;
+          right: 1.8%;
         }
       }
     }
-    .sports{
+    .tours{
       span{
         &::after {
-          background-image: url(../../assets/images/locations/deportes.svg);
+          background-image: url(../../assets/images/ubicacion/pin-turismo.svg);
         }
         b{
-          opacity: 0;
-          background-color: #4a090a;
+          opacity: 1;
+          background-color: $text;
         }
         &:first-child{
-          &::after{
-            right: 32px;
-          }
-          top: 29%;
-          left: 5.5%;
+          bottom: 28%;
+          left: 27.5%;
         }
         &:nth-child(2){
-          top: 16%;
-          left: 37%;
+          bottom: 35%;
+          left: 39%;
         }
         &:nth-child(3){
-          top: 12%;
-          right: 41%;
+          bottom: 35%;
+          left: 49%;
         }
         &:nth-child(4){
+          bottom: 33.5%;
+          right: 27%;
+        }
+        &:nth-child(5){
+          top: 34%;
+          right: 20%;
+        }
+        &:nth-child(6){
           &::after{
-            right: 10px;
+            right: 28px;
           }
-          bottom: 29%;
-          right: 43%;
+          bottom: 3%;
+          right: 16%;
+        }
+        &:nth-child(7){
+          top:24%;
+          right: 13%;
         }
         &:last-child{
-          &::after{
-            right: 14px;
-          }
-          bottom: 1%;
-          right: 8%;
+          bottom: 12%;
+          right: 1%;
         }
       }
     }
     .shopping{
       span{
         &::after {
-          background-image: url(../../assets/images/locations/shopping.svg);
+          background-image: url(../../assets/images/ubicacion/pin-shopping.svg);
         }
         b{
           opacity: 0;
-          background-color: #8a5774;
+          background-color: $secondary;
         }
         &:first-child{
-          &::after{
-            right: 13px;
-          }
           bottom: 1%;
           left: 30%;
         }
         &:nth-child(2){
-          &::after{
-            right: 22px;
-          }
           bottom: 8.3%;
           left: 36%;
         }
         &:nth-child(3){
-          &::after{
-            bottom: 22px;
-            right: 15px;
-          }
           top: 32%;
           right: 43.8%;
         }
         &:last-child{
-          &::after{
-            right: 14px;
-          }
           top: 31.5%;
           right: 35.8%;
         }
