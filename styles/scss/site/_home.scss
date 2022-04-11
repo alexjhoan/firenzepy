@@ -1,0 +1,95 @@
+/*----------------------------banner-header-------------------------------*/
+.banner{
+  background-image:url(../../assets/images/header/header-d.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding-top: 150px;
+  h1, p{
+    color: $white;
+  }
+  h1{
+    padding-bottom: 15px;
+    padding-top: 5px;
+  }
+}
+/*----------------------------Description-------------------------------*/
+.descriptions{
+  padding: 100px 0;
+  background-image: url(../../assets/images/descripcion/fondo.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  &_image{
+    position: relative;
+    z-index: 2;
+  }
+  &_right{
+    position: relative;
+    z-index: 1;
+    padding: 30px 12px;
+    &::before{
+      content: "";
+      position: absolute;
+      height: 100%;
+      background: #fff;
+      z-index: 1;
+      width: 150%;
+      right: 0;
+      top: 0;
+      box-shadow: 7px 6px 28px #00000021;
+    }
+    img.logo{
+      max-width: 150px;
+      width: 100%;
+      margin-bottom: 18px;
+    }
+  }
+  img.imgleft {
+    max-width: 500px;
+    position: absolute;
+    left: -43px;
+    top: -27px;
+  }
+  &_text{
+    position: relative;
+    z-index: 2;
+    padding: 0 40px;
+  }
+  &_table{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 18px;
+    p{
+      margin-bottom: 0;
+    }
+    .line{
+      margin: 11px 0;
+      border-bottom: 1px solid $lightgrey;
+    }
+  }
+  .button{
+    margin-top: 23px;
+  }
+  &_logos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 90px;
+    margin-top: 24px;
+    .text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 1rem;
+    }
+    img{
+      max-width: 110px;
+      width: 100%;
+      height: 40px;
+      margin-top: 10px;
+    }
+  }
+}

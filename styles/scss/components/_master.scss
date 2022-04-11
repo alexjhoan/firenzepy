@@ -1,0 +1,60 @@
+:root{
+  font-size: 16px;
+}
+
+body{
+  opacity: 0;
+}
+p.h1, h1, p.h2, h2{
+  font-family: Poppins;
+  color: $primary;
+  font-weight: 600;
+}
+
+p.h3, h3, p.h4, h4, p.h5, h5, p.h6, h6 {
+  font-family: Roboto;
+  color: $text;
+}
+
+a,p,div,input,button,textarea{
+  font-family: Roboto;
+  color: $text;
+}
+
+img {
+  max-width: 100%;
+}
+
+section {
+  position: relative;
+  padding: 8vh 0;
+}
+
+.btn.btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+  border-radius: 36px;
+  padding: 10px 40px;
+  color: $white;
+}
+
+.btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus{
+  background-color: $btn-hover!important;
+  border-color: $btn-hover!important;
+  box-shadow: none!important;
+}
+.btn.btn-primary:active{
+    background-color: $primary;
+    border-color: $primary;
+}
+/*----------------------------Queries-------------------------------*/
+
+@media (max-width: 1399.98px) {}
+
+@media (max-width: 1199.98px) {}
+
+@media (max-width: 991.98px) {}
+
+@media (max-width: 767.98px) {}
+
+@media (max-width: 575.98px) {}
