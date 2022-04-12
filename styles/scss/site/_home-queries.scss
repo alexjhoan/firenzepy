@@ -1,3 +1,12 @@
+
+@media(min-width: 1200px){
+  .ubicacion3{
+    &_right{
+      max-width: 670px;
+      top: 12%;
+    }
+  }
+}
 @media(min-width: 1400px){
   .descriptions{
     &_right{
@@ -13,12 +22,23 @@
       column-gap: 100px;
     }
   }
+  .ubicacion3{
+    &_right{
+      max-width: 775px;
+      top: 8%;
+    }
+  }
 }
 
 @media (min-width: 1600px){
   .descriptions{
     &_logos{
       column-gap: 120px;
+    }
+  }
+  .ubicacion3{
+    &_center{
+      margin-left: 0;
     }
   }
 }
@@ -91,10 +111,103 @@
       height: 80vh;
     }
   }
+  .ubicacion3{
+    &_center{
+      margin-left: 0;
+    }
+    &_right {
+      position: relative;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 770px;
+      padding: 0;
+      span{
+        &::after{
+          width: 15px;
+          height: 15px;
+          bottom: 31px;
+        }
+      }
+    }
+
+  }
 }
 
 @media (max-width: 767.98px) {
-
+  .ubicacion3{
+    .educations{
+      span{
+        &:first-child{
+          bottom: 14%;
+          left: 3%;
+        }
+        &:nth-child(2){
+          right: 35%;
+        }
+        &:last-child{
+          bottom: 37%;
+          right: 0%;
+        }
+      }
+    }
+    .tours{
+      span{
+        &:first-child{
+          bottom: 27%;
+          left: 24.5%;
+        }
+        &:nth-child(2){
+          bottom: 34%;
+          left: 38.8%;
+        }
+        &:nth-child(3){
+          bottom: 34%;
+          left: 48%;
+        }
+        &:nth-child(4){
+          bottom: 35.5%;
+          right: 25%;
+        }
+        &:nth-child(5){
+          top: 34%;
+          right: 18%;
+        }
+        &:nth-child(6){
+          bottom: 2%;
+          right: 15%;
+        }
+        &:nth-child(7){
+          top:24%;
+          right: 11%;
+        }
+        &:last-child{
+          bottom: 11%;
+          right: -1%;
+        }
+      }
+    }
+    .shopping{
+      span{
+        &:first-child{
+          bottom: 4%;
+          left: -1%;
+        }
+        &:nth-child(2){
+          bottom: 45.5%;
+          left: 32%;
+        }
+        &:nth-child(3){
+          bottom: 26%;
+          left: 34%;
+        }
+        &:last-child{
+          bottom: 23.5%;
+          right: 42%;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -107,6 +220,161 @@
     iframe {
       width: 100%;
       height: 230px;
+    }
+  }
+}
+@media (max-width: 475.98px) {
+  .ubicacion3{
+    .educations{
+      span{
+        &:first-child{
+          bottom: 12.5%;
+          left: 1%;
+        }
+        &:nth-child(2){
+          right: 33.5%;
+        }
+        &:last-child{
+          bottom: 35%;
+        }
+      }
+    }
+    .tours{
+      span{
+        &:first-child{
+          bottom: 26%;
+          left: 23.5%;
+        }
+        &:nth-child(2){
+          bottom: 33%;
+          left: 37.8%;
+        }
+        &:nth-child(3){
+          bottom: 33%;
+          left: 47%;
+        }
+        &:nth-child(4){
+          bottom: 33.5%;
+          right: 24%;
+        }
+        &:nth-child(5){
+          top: 33%;
+          right: 16%;
+        }
+        &:nth-child(6){
+          bottom: 0%;
+          right: 14%;
+        }
+        &:last-child{
+          bottom: 9%;
+        }
+      }
+    }
+    .shopping{
+      span{
+        &:first-child{
+          bottom: 3%;
+          left: -2%;
+        }
+        &:nth-child(2){
+          bottom: 43.5%;
+          left: 31%;
+        }
+        &:nth-child(3){
+          bottom: 25%;
+          left: 33%;
+        }
+        &:last-child{
+          bottom: 21.5%;
+          right: 43%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 375.98px) {
+  .ubicacion3{
+    .educations{
+      span{
+        &:first-child{
+          bottom: 9.5%;
+          left: -1%;
+        }
+        &:nth-child(2){
+          right: 30.5%;
+        }
+        &:last-child{
+          bottom: 34%;
+          right: -2%;
+        }
+      }
+    }
+    .tours{
+      span{
+        &:first-child{
+          bottom: 23%;
+          left: 21.5%;
+        }
+        &:nth-child(2){
+          bottom: 31%;
+          left: 35.8%;
+        }
+        &:nth-child(3){
+          bottom: 31%;
+          left: 45%;
+        }
+        &:nth-child(4){
+          bottom: 31.5%;
+          right: 23%;
+        }
+        &:nth-child(5){
+          top: 35%;
+          right: 15%;
+        }
+        &:nth-child(6){
+          bottom: -3%;
+          right: 12%;
+        }
+        &:nth-child(6){
+          top: 24%;
+          right: 9%;
+        }
+        &:last-child{
+          bottom: 5%;
+          right: -3%;
+        }
+      }
+    }
+    .shopping{
+      span{
+        &:first-child{
+          bottom: 0%;
+          left: -3%;
+        }
+        &:nth-child(2){
+          bottom: 40.5%;
+          left: 28%;
+        }
+        &:nth-child(3){
+          bottom: 23%;
+          left: 32%;
+        }
+        &:last-child{
+          bottom: 19%;
+          right: 42%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 320.98px) {
+  .ubicacion3{
+    .educations{
+      span{
+        &:nth-child(2){
+          right: 28.5%;
+        }
+      }
     }
   }
 }

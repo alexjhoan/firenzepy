@@ -131,12 +131,12 @@
 }
 /*----------------------------Ubicacion3----------------------------------*/
 .ubicacion3{
-  img.leaf {
+  .leaf {
     position: absolute;
-    width: 100%;
-    max-width: 150px;
-    top: 0;
     left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 130px;
   }
   &_title{
     margin-bottom: 20px;
@@ -149,184 +149,200 @@
       margin-right: 10px;
     }
   }
-
-    &_item{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin-bottom: 30px;
-      column-gap: 20px;
-      cursor: pointer;
-      user-select: none;
-      img{
-        max-width: 19px;
-        width: 100%;
-      }
+  &_center{
+    margin-left: 100px;
+  }
+  &_item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+    column-gap: 20px;
+    cursor: pointer;
+    user-select: none;
+    img{
+      max-width: 19px;
+      width: 100%;
+    }
+    p{
+      margin-bottom: 0;
+    }
+    &:hover{
+      font-weight: 700;
+    }
+    &.selector{
       p{
-        margin-bottom: 0;
-      }
-      &:hover{
+        color:$black;
         font-weight: 700;
       }
-      &.selector{
-        p{
-          color:$black;
-          font-weight: 700;
-        }
+    }
+  }
+  &_right{
+    position: absolute;
+    right: 0;
+    max-width: 560px;
+    padding-right:0;
+    top: 25%;
+    .active{
+      span:hover *{
+        opacity: 1;
+        transition: 0.3s ease;
+      }
+      span::after{
+        opacity: 1 !important;
       }
     }
-    &_right{
+    span{
+      b{
+        padding: 4px 5px 1px 5px;
+        line-height: 1.25;
+        display: inline-block;
+        position: relative;
+        z-index: 10;
+      }
+      color: $white;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.6rem;
       position: absolute;
-      right: 0;
-      max-width: 725px;
-      padding-right:0;
-      .active{
-        span:hover *{
-          opacity: 1;
-          transition: 0.3s ease;
-        }
-        span::after{
-          opacity: 1 !important;
-        }
-      }
-      span{
-        b{
-          padding: 4px 5px 1px 5px;
-          line-height: 1.25;
-          display: inline-block;
-          position: relative;
-          z-index: 10;
-        }
-        color: $white;
-        text-align: left;
-        font-weight: 600;
-        font-size: 0.6rem;
+      max-width: 95px;
+      text-align: center;
+      &::after {
+        opacity: 0;
         position: absolute;
-        max-width: 95px;
-        text-align: center;
-        &::after {
-          opacity: 1;
-          position: absolute;
-          content: "";
-          width: 14px;
-          height: 19px;
-          background-repeat: no-repeat;
-          background-size: contain;
-          background-position: center;
-          z-index: 2;
-          bottom: 35px;
-          right: 22px;
-        }
-        &:hover::after{
-          transform: translateY(-3px);
-          transition: 0.3s ease;
-        }
+        content: "";
+        width: 14px;
+        height: 19px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        z-index: 2;
+        bottom: 35px;
+        right: 22px;
+      }
+      &:hover::after{
+        transform: translateY(-3px);
+        transition: 0.3s ease;
       }
     }
-    .educations{
-      span{
-        &::after {
-          background-image: url(../../assets/images/ubicacion/pin-educacion.svg);
+  }
+  .educations{
+    span{
+      &::after {
+        background-image: url(../../assets/images/ubicacion/pin-educacion.svg);
+      }
+      b{
+        opacity: 0;
+        background-color: $primary;
+      }
+      &:first-child{
+        &::after{
+          right: 30px;
         }
-        b{
-          opacity: 0;
-          background-color: $primary;
+        bottom: 15%;
+        left: 6%;
+      }
+      &:nth-child(2){
+        &::after{
+          right: 40px;
         }
-        &:first-child{
-          &::after{
-            right: 30px;
-          }
-          bottom: 15%;
-          left: 6%;
+        top: 16.5%;
+        right: 37%;
+      }
+      &:last-child{
+        &::after{
+          right: 17px;
         }
-        &:nth-child(2){
-          &::after{
-            right: 40px;
-          }
-          top: 16.5%;
-          right: 37%;
-        }
-        &:last-child{
-          &::after{
-            right: 17px;
-          }
-          bottom: 40%;
-          right: 1.8%;
-        }
+        bottom: 40%;
+        right: 1.8%;
       }
     }
-    .tours{
-      span{
-        &::after {
-          background-image: url(../../assets/images/ubicacion/pin-turismo.svg);
+  }
+  .tours{
+    span{
+      &::after {
+        background-image: url(../../assets/images/ubicacion/pin-turismo.svg);
+      }
+      b{
+        opacity: 0;
+        background-color: $text;
+      }
+      &:first-child{
+        &::after{
+          right: 12px;
         }
-        b{
-          opacity: 1;
-          background-color: $text;
+        bottom: 28%;
+        left: 26.5%;
+      }
+      &:nth-child(2){
+        bottom: 35%;
+        left: 40.8%;
+      }
+      &:nth-child(3){
+        &::after{
+          right: 35px;
         }
-        &:first-child{
-          bottom: 28%;
-          left: 27.5%;
+        bottom: 35%;
+        left: 49%;
+      }
+      &:nth-child(4){
+        &::after{
+          bottom: 22px;
         }
-        &:nth-child(2){
-          bottom: 35%;
-          left: 39%;
+        bottom: 36.5%;
+        right: 27%;
+      }
+      &:nth-child(5){
+        top: 34%;
+        right: 20%;
+      }
+      &:nth-child(6){
+        &::after{
+          right: 28px;
         }
-        &:nth-child(3){
-          bottom: 35%;
-          left: 49%;
-        }
-        &:nth-child(4){
-          bottom: 33.5%;
-          right: 27%;
-        }
-        &:nth-child(5){
-          top: 34%;
-          right: 20%;
-        }
-        &:nth-child(6){
-          &::after{
-            right: 28px;
-          }
-          bottom: 3%;
-          right: 16%;
-        }
-        &:nth-child(7){
-          top:24%;
-          right: 13%;
-        }
-        &:last-child{
-          bottom: 12%;
-          right: 1%;
-        }
+        bottom: 3%;
+        right: 16%;
+      }
+      &:nth-child(7){
+        top:24%;
+        right: 13%;
+      }
+      &:last-child{
+        bottom: 12%;
+        right: 1%;
       }
     }
-    .shopping{
-      span{
-        &::after {
-          background-image: url(../../assets/images/ubicacion/pin-shopping.svg);
+  }
+  .shopping{
+    span{
+      &::after {
+        background-image: url(../../assets/images/ubicacion/pin-shopping.svg);
+      }
+      b{
+        opacity: 0;
+        background-color: $secondary;
+      }
+      &:first-child{
+        bottom: 5%;
+        left: 2%;
+      }
+      &:nth-child(2){
+        bottom: 47.5%;
+        left: 34%;
+      }
+      &:nth-child(3){
+        &::after{
+          bottom: 46px;
+          right: 20px
         }
-        b{
-          opacity: 0;
-          background-color: $secondary;
-        }
-        &:first-child{
-          bottom: 1%;
-          left: 30%;
-        }
-        &:nth-child(2){
-          bottom: 8.3%;
-          left: 36%;
-        }
-        &:nth-child(3){
-          top: 32%;
-          right: 43.8%;
-        }
-        &:last-child{
-          top: 31.5%;
-          right: 35.8%;
-        }
+        bottom: 27%;
+        left: 35%;
+      }
+      &:last-child{
+        bottom: 24.5%;
+        right: 41%;
       }
     }
+  }
 }
 
