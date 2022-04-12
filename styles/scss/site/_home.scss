@@ -505,3 +505,156 @@
     }
   }
 }
+/*----------------------------Typologies-------------------------------*/
+.tipologias{
+  padding: 0;
+  p{
+    color: $white;
+    font-style: italic;
+    position: relative;
+  }
+  #myBtn{
+    position: relative;
+  }
+  &_imgA{
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+  }
+  &_imgA1{
+    background-image:url(../../assets/images/tipologias/monoambientes.jpg);
+  }
+  &_imgA2{
+    background-image:url(../../assets/images/tipologias/1dormitorio.jpg);
+  }
+  &_imgA3{
+    background-image:url(../../assets/images/tipologias/2dormitorios.jpg);
+  }
+  &_text{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 80px;
+    &::before{
+      position:absolute;
+      content: "";
+      background-image: url(../../assets/images/tipologias/fondo-d.png);
+      width: 32%;
+      height: 100vh;
+      z-index: 0;
+      left: 0;
+      top: 0;
+      background-size: 100% 100%;
+      background-position: left center;
+      background-repeat: no-repeat;
+    }
+    .titleTextTypology {
+      height: 80px;
+      overflow: hidden;
+      text-shadow: 0 6px 10px #494846;
+    }
+  }
+  &_download {
+    margin-top: 20px;
+    position: relative;
+    .tipo_down {
+      width: 15px;
+      margin-right: 10px;
+    }
+    a{
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      color: $white;
+    }
+  }
+}
+/*--------------------------------Modal---------------------*/
+#myModal {
+  .modal-content {
+    padding: 60px 80px;
+    border-radius: 40px;
+    .btn-close {
+      color: #005170;
+      border: none;
+      position: absolute;
+      right: 70px;
+      top: 70px;
+      z-index: 2;
+    }
+    .btn-close:hover, .btn-close:focus, .btn-close:active {
+        color: $black;
+        text-decoration: none;
+        cursor: pointer;
+        outline: none;
+        box-shadow: none;
+    }
+    .modal-body{
+      .swiper-wrapper{
+        .swiper-slide{
+          display: grid;
+          grid-template-columns: 40% auto;
+          column-gap: 35px;
+          .col-left{
+            p.h1{
+              font-style: normal;
+            }
+            p.h5{
+              font-style: 400;
+            }
+            h5{
+              margin-bottom: 15px;
+            }
+            p.line{
+              border-bottom: 1px solid #cecece;
+              width: 100%;
+              padding: 10px 0;
+              margin-bottom: 0;
+            }
+            p.mt-3{
+              font-size: 0.875rem;
+            }
+            .img-left {
+              margin-top: 20px;
+              width: 100%;
+              max-width: 320px;
+            }
+          }
+          .col-right{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+            margin-top: auto;
+            margin-bottom: auto;
+            .img-right {
+              width: 100%;
+              max-width: 430px;
+            }
+            .img-rightB{
+              width: 25px;
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+      .swiper-button-white{
+        &::after{
+          font-size: 40px;
+          color: $text;
+        }
+      }
+      .swiper-button-prev{
+        left: -30px;
+      }
+      .swiper-button-next {
+        right: -30px;
+      }
+    }
+  }
+}

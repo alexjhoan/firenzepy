@@ -86,3 +86,74 @@ var chart = new Chart(ctx, {
         }
     }
 });
+//----------------------Animations-Typologies----------------------------
+$(window).scroll(function () {
+  animations_tipologies_text()
+  tipologies_imgA("#tipologias .tipologias_imgA1", "MONOAMBIENTES")
+  tipologies_imgA("#tipologias .tipologias_imgA2", "1 DORMTORIO")
+  tipologies_imgA("#tipologias .tipologias_imgA3", "2 DORMITORIOS")
+})
+
+function animations_tipologies_text(){
+  const container = $('#tipologias')
+  const heightElement = $(container).height()
+  const heightTop = $(container).offset().top;
+  const scroll = $(window).scrollTop();
+  if (scroll>heightTop && scroll<(heightTop + (heightElement /2 ))) {
+    $('.typologies_text').css('position', 'fixed')
+    if (scroll > heightTop + (heightElement / 3)) {
+      $(".typologies_text").css({"top": "auto", "bottom": "0" })
+    } else {
+      $(".typologies_text").css({"top": "0", "bottom": "auto" })
+    }
+  } else {
+    $('.typologies_text').css('position', 'absolute')
+  }
+}
+function tipologies_imgA(section, text){
+  const container = $(section);
+  const heightTop = $(container).offset().top;
+  const scroll = $(window).scrollTop();
+  const heightElem = container.height();
+  const move = heightTop - scroll
+  if ((scroll > heightTop) && (scroll < (heightElem + heightTop))) {
+    $(section).css({
+      "background-attachment": "fixed",
+      "background-position-y": move * .15,
+    })
+  } else {
+    $(section).css({
+      "background-attachment": "unset",
+      "background-position-y": 0,
+    })
+  }
+  if ((scroll > (heightTop - (heightElem / 2))) && (scroll < (heightTop + (heightElem / 2)))) {
+    if ($(".titleTextTypology .display-5").text() != text) {
+      $(".titleTextTypology .display-5").fadeOut().promise().done(function () {
+        setTimeout(() => {
+          $(".titleTextTypology .display-5").text(text).show()
+        }, 50);
+      })
+    }
+  }
+}
+// ------------------------------My Modal----------------------------
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+// ----------Swipper Modal-----------------
+const swiperpopup = new Swiper('.swiper-popup', {
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+// ----------Swipper Mobile Modal-----------------
+const swipermobile = new Swiper('.swiper-mpopup', {
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});

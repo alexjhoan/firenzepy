@@ -43,9 +43,29 @@ section {
   border-color: $btn-hover!important;
   box-shadow: none!important;
 }
+
 .btn.btn-primary:active{
     background-color: $primary;
     border-color: $primary;
+}
+.btn.btn-secondary {
+  background-color: $white;
+  border-color: $white;
+  border-radius: 36px;
+  padding: 10px 40px;
+  color: $black;
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+.btn.btn-secondary:hover, .btn.btn-secondary:active, .btn.btn-secondary:focus{
+  background-color: $lightestgrey!important;
+  border-color: $lightestgrey!important;
+  box-shadow: none!important;
+}
+
+.btn.btn-secondary:active{
+    background-color: $white;
+    border-color: $white;
 }
 /*----------------------------Queries-------------------------------*/
 
