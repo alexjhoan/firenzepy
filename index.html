@@ -16,7 +16,10 @@
 
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <link rel="preload" href="assets/lib/bootstrap/css/bootstrap.min.css" as="style">
+  <link rel="stylesheet" href="assets/lib/swiper/swiper-bundle.min.css">
   <link rel="preload" href="assets/lib/animate.min.css" as="style">
+  <link rel="stylesheet" href="assets/lib/fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+  <script type="text/javascript" src="assets/lib/svg-inject.min.js"></script>
   <link rel="preload" href="styles/css/fonts.css" as="style"/>
   <link rel="preload" href="styles/css/bundle.min.css" as="style"/>
   <link rel="stylesheet" href="assets/lib/bootstrap/css/bootstrap.min.css">
@@ -104,7 +107,6 @@
             <img src="assets/images/ubicacion/flor.png" alt="Firenze Asunción" class="ubicacion1_right_flor d-none d-lg-block" loading="lazy">
           </div>
             <img src="assets/images/ubicacion/mano-d.png" alt="Firenze Asunción" class="ubicacion1_right_mano d-none d-lg-block" loading="lazy">
-            <img src="assets/images/ubicacion/mano-m.png" alt="Firenze Asunción" class="ubicacion1_right_mano d-none d-lg-block" loading="lazy">
         </div>
       </div>
     </div>
@@ -114,11 +116,10 @@
   <!-- TODO: Agregar video, primero debe cargar el JPG y solo empieza el Play cuando está en la sección. -->
     <div class="video-img">
       <img src="assets/images/ubicacion/portada-video.jpg" alt="Firenze Asunción" class="d-none">
-      <iframe src="https://www.youtube.com/embed/KgNBfc_Xf6s" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      <!-- <iframe src="https://www.youtube.com/embed/KgNBfc_Xf6s" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe> -->
     </div>
   </section>
   <section id="ubicacion3" class="ubicacion3">
-
     <div class="container ">
       <div class="row">
         <div class="col-lg-2 d-none d-lg-block leaf">
@@ -177,10 +178,77 @@
       </div>
     </div>
   </section>
+  <section id="unidades" class="unidades">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 wow fadeInDown">
+          <div class="unidades_title">
+            <img src="assets/images/flort.png" alt="">
+            <h2 class="mb-0">Conocé las unidades</h2>
+          </div>
+          <p>Monoambientes, 1 y 2 dormitorios, todas con terraza.</p>
+        </div>
+      </div>
+      <div class="row mt-4 align-items-center unidades_edif">
+        <div class="col-lg-5 col-12 wow fadeInLeft">
+          <img src="assets/images/unidades/edificio.svg" onload="SVGInject(this)" alt="Firenze Asunción">
+        </div>
+        <div class="col-lg-7 col-12 wow fadeInRight">
+          <p id="nameLevel"><span>Subsuelo</span><img src="assets/images/unidades/lupa_1.svg" alt="brujula" loading="lazy"></p>
+          <a class="edfLevelUrl" href="assets/images/unidades/plantas/subsuelo.png">
+            <img src="assets/images/unidades/plantas/subsuelo.png" alt="zoom" class="edfImgLevel" loading="lazy">
+          </a>
+          <div class="unidades_download">
+            <a href="assets/brochure-firenze-asuncion.pdf" target="_blank">
+              <img src="assets/images/unidades/descargar.svg" alt="download" class="down" loading="lazy">
+              Descargar planos
+            </a>
+            <a class="edfLevelUrl" href="assets/images/unidades/plantas/subsuelo.png" >
+              <img src="assets/images/unidades/lupa.svg" alt="zoom" class="zoom" loading="lazy">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 unidades_footer wow fadeInUp">
+          <div class="unidades_footer_chart">
+            <canvas id="myChart"></canvas>
+            <p class="h4 titleFoo fw-bold mb-0">50%<br /><span>VENDIDO</span></p>
+          </div>
+          <div class="unidades_footer_text">
+            <h5 class="mb-0">¡ASEGURÁ TU UNIDAD EN PREVENTA!</h5>
+            <p class="fw-bold mb-4">Consultá precios y disponibilidad</p>
+            <a href="#contact" class="btn btn-primary">Solicitar información</a>
+          </div>
+        </div>
+        <div class="unidades_progress"></div>
+      </div>
+      <div class="row align-items-sm-center unidades_tecno">
+        <div class="col-lg-6 col-12 wow fadeInLeft">
+          <div class="unidades_title">
+            <img src="assets/images/flort.png" alt="">
+            <h2 class="mb-0">Construcción de calidad</h2>
+          </div>
+          <p class="text mt-4">La propuesta resalta por su elegancia y calidad constructiva, donde todas las unidades ofrecen un excelente nivel de comodidad. Terminaciones con estilo que expresan cuidado por el detalle y tipologías bien distribuidas, donde podrás disfrutar de balcones con hermosas vistas despejadas a la ciudad.</p>
+          <p>Su exterior diseñado en ladrillo visto y Doble Vidriado Hermético (DVH) le otorga un remate estético muy elegante en su fachada, con un alto nivel de eficiencia y bajo mantenimiento. La tecnología DVH está compuesta por dos vidrios separados por una cámara de aire sellada herméticamente, que ofrece excelente aislación termoacústica.</p>
+          <p>Todas las unidades cuentan con calidad superior y equipamiento completo en cocina y baño. La cocina cuenta con muebles bajo mesada y aéreos, vitrocerámica, horno y campana. Baños con mampara, espejo, griferías alemanas y todas las luminarias incluidas.</p>
+        </div>
+        <div class="col-12 col-lg-6 unidades_flex-tecno  wow fadeInRight">
+          <img src="assets/images/unidades/constru1.png" alt="Griffo" class="img-fluid" loading="lazy">
+          <img src="assets/images/unidades/constru2.png" alt="Cocina y campana" class="img-fluid" loading="lazy">
+          <img src="assets/images/unidades/constru3.png" alt="Esquina ventana" class="img-fluid" loading="lazy">
+          <img src="assets/images/unidades/constru4.png" alt="aire acondicionado" class="img-fluid" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
   <footer></footer>
 <script type="text/javascript" src="assets/lib/jquery.min.js"></script>
 <script type="text/javascript" src="assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="assets/lib/wow.min.js"></script>
+<script type="text/javascript" src="assets/lib/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="assets/lib/fancybox/source/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="assets/lib/chart.js"></script>
 <script type="text/javascript" src="assets/index.js"></script>
 </body>
 </html>
