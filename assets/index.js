@@ -91,7 +91,7 @@ $(window).scroll(function () {
   animations_tipologies_text()
   tipologies_imgA("#tipologias .tipologias_imgA1", "MONOAMBIENTES")
   tipologies_imgA("#tipologias .tipologias_imgA2", "1 DORMTORIO")
-  tipologies_imgA("#tipologias .tipologias_imgA3", "2 DORMITORIOS")
+  // tipologies_imgA("#tipologias .tipologias_imgA3", "2 DORMITORIOS")
 })
 
 function animations_tipologies_text(){
@@ -100,14 +100,14 @@ function animations_tipologies_text(){
   const heightTop = $(container).offset().top;
   const scroll = $(window).scrollTop();
   if (scroll>heightTop && scroll<(heightTop + (heightElement /2 ))) {
-    $('.typologies_text').css('position', 'fixed')
+    $('.tipologias_text').css('position', 'fixed')
     if (scroll > heightTop + (heightElement / 3)) {
-      $(".typologies_text").css({"top": "auto", "bottom": "0" })
+      $(".tipologias_text").css({"top": "auto", "bottom": "0" })
     } else {
-      $(".typologies_text").css({"top": "0", "bottom": "auto" })
+      $(".tipologias_text").css({"top": "0", "bottom": "auto" })
     }
   } else {
-    $('.typologies_text').css('position', 'absolute')
+    $('.tipologias_text').css('position', 'absolute')
   }
 }
 function tipologies_imgA(section, text){
