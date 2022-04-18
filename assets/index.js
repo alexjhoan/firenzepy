@@ -157,3 +157,125 @@ const swipermobile = new Swiper('.swiper-mpopup', {
     prevEl: ".swiper-button-prev",
   },
 });
+// ------------------------------Units Gallery-----------------------------
+const galleryThumbs = new Swiper('.gallery-thumbs', {
+  spaceBetween: 20,
+  loop: true,
+  slidesPerView: 7,
+  freeMode: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+});
+const galleryTop = new Swiper('.gallery-top', {
+  spaceBetween: 0,
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  thumbs: {
+    swiper: galleryThumbs
+  }
+});
+//-------------------------------- fancyBox-Amenities2----------------------------------
+
+$('[data-fancybox="gallery"]').fancybox({
+  animationEffect: "fade",
+  arrows: true,
+  infobar: false,
+  buttons: ["zoom", "close"]
+});
+//-------------------------------- Swipper-Amenities----------------------------------
+var bamenities = new Swiper('.swiper-amenities', {
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+// ------------------------------Gallery-Advance-----------------------------
+if (screen.width > 768){
+  $("#lightgallery").lightGallery();
+  const items =  $('#lightgallery a').length;
+  const imgInit = 8
+  const ImgMore = 4
+  $('#lightgallery a:lt('+imgInit+')').show();
+  if(imgInit >= items) {
+    $('.btnMore').hide()
+  }
+  function seeMore() {
+    let visibleItems = $('#lightgallery a:visible').length + ImgMore
+    $('#lightgallery a:lt('+visibleItems+')').fadeIn(800);
+    if(visibleItems >= items) {
+      $('.btnMore').hide();
+    }
+  }
+}
+  if (screen.width < 768) {
+    $("#gallery").addClass("swiper")
+    $("#lightgallery").addClass("swiper-wrapper")
+    $(".kids").addClass("swiper-slide")
+      const mygallery = new Swiper(".swiper", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      })
+  }
+//---------------------------------Form-------------------------------
+function dataSubmited(data) {
+  const requestOptions = {
+    method: 'POST',
+    body: data,
+    headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+    },
+  };
+  fetch("https://www.infocasas.com.py/proyectos/torre-firenze-asuncion?&formulario=1&json=1", requestOptions)
+  .then((json) => {
+    setTimeout(()=>{
+      if (json.status === 200) {
+        $('#formSuccess').fadeIn();
+      } else {
+        $('#formError').fadeIn();
+      }
+      $('#formSending').hide();
+    }, 2000)
+  })
+  .catch(error => {
+    console.log('error', error);
+    setTimeout(() => {
+      $('#formSending').hide();
+      $('#formError').fadeIn();
+    }, 2000)
+  });
+}
+
+function submited() {
+ 'use strict'
+  const form = document.querySelector('#contactForm')
+  const data = JSON.stringify({
+    nombre: form.name.value,
+    apellido: "",
+    email: form.email.value,
+    telefono: form.phone.value,
+    tel: form.phone.value,
+    source: 2,
+    utm_source: "web_cliente",
+    utm_medium: "austin",
+    extra: form.consult.value,
+    InfoLeads: 1,
+    IDflow_execution: 4315
+  })
+  if (!form.checkValidity()) {
+    event.preventDefault()
+    event.stopPropagation()
+  }else{
+    dataSubmited(data)
+    setTimeout(()=>{
+      $(form).fadeOut();
+      $('#formSending').fadeIn();
+    },300)
+  }
+  form.classList.add('was-validated')
+}

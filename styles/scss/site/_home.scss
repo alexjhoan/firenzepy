@@ -345,7 +345,7 @@
     }
   }
 }
-/*---------------------------Units-------------------------------*/
+/*-------------------------------Units------------------------------------*/
 .unidades{
   background-color: $lightestgrey;
   padding-top: 100px;
@@ -505,7 +505,7 @@
     }
   }
 }
-/*----------------------------Typologies-------------------------------*/
+/*----------------------------Typologies----------------------------------*/
 .tipologias{
   padding: 0;
   p{
@@ -528,7 +528,6 @@
   }
   &_imgA3{
     background-image:url(../../assets/images/tipologias/2dormitorios.jpg);
-    display: none;
   }
   &_text{
     display: flex;
@@ -574,7 +573,7 @@
     }
   }
 }
-/*--------------------------------Modal---------------------*/
+/*--------------------------------Modal-----------------------------------*/
 #myModal {
   .modal-content {
     padding: 60px 80px;
@@ -656,5 +655,318 @@
         right: -30px;
       }
     }
+  }
+}
+/*------------------------------Gallery------------------------------------*/
+.unitsGallery {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 0;
+  .gallery-thumbs {
+    margin-top: 30px;
+    .swiper-slide:hover {
+      cursor: pointer;
+    }
+  }
+  .gallery-top{
+    .swiper-button-white{
+      &::after{
+        color: $white;
+        font-size: 30px;
+      }
+    }
+  }
+}
+/*----------------------------Amenities1-----------------------------------*/
+.amenities1{
+  background-color: $lightestgrey;
+  margin-top: 80px;
+  padding-top: 56px;
+  &_title{
+    margin-bottom: 27px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    img{
+      max-width: 37px;
+      width: 100%;
+      margin-right: 10px;
+    }
+  }
+  &_img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    img{
+      max-width: 660px;
+      width: 100%;
+    }
+  }
+}
+/*----------------------------Amenities2-----------------------------------*/
+.amenities2{
+  padding-top: 84px;
+  padding-bottom: 86px;
+  &_icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-bottom: 49px;
+    &_frame{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        max-width: 59px;
+        width: 100%;
+        margin-bottom: 16px;
+      }
+      p{
+        text-align: center;
+      }
+    }
+  }
+  .fancyImgBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 15px;
+    margin-top: 10px;
+    text-align: center;
+    .fancyBox{
+      .fancyImgItem{
+        height: 250px;
+        .thumbnail {
+          -webkit-transition: ease-in-out 0.5s;
+          transition: ease-in-out 0.5s;
+          width: 80%;
+          margin-bottom: 50px;
+        }
+      }
+      .fancyImgItem:hover img.thumbnail {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+        -webkit-transition: ease-in-out 0.5s;
+        transition: ease-in-out 0.5s;
+      }
+      .information {
+        .titleFancyBox{
+          margin-bottom: 27px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+/*----------------------------Bamenities-----------------------------------*/
+.bamenities{
+  padding: 0;
+  img{
+    width: 100%;
+  }
+  .swiper-container{
+    .swiper-button-white{
+      &::after{
+        color: $white;
+        // font-size: 30px;
+      }
+    }
+  }
+}
+/*----------------------------Advance-----------------------------------*/
+.avance{
+  background-color: $lightestgrey;
+  padding-top: 52px;
+  padding-bottom: 45px;
+  h2.text-center {
+    margin-bottom: 40px;
+    color: $text;
+  }
+  &_line{
+    img{
+      width: 72%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &_icons-text{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 82%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+    .item{
+      text-align: center;
+      img{
+        width: 100%;
+        height: 50px;
+        margin-top: 0;
+        margin-bottom: 0;
+        max-width: 50px;
+      }
+      p{
+        margin-top: 13px;
+      }
+    }
+    .inic{
+      width: 26%;
+    }
+    .finish{
+      width: 26%;
+      margin-left: auto;
+    }
+  }
+}
+/*---------------------------Gallery-------------------------------*/
+.gallery{
+  display: none;
+  background-color: #F7F7F7;
+  padding-bottom: 27px;
+  padding-top: 0;
+  #lightgallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 4px;
+    a{
+      overflow: hidden;
+      position: relative;
+    }
+    a img {
+      transition: all .5s ease;
+      width: 100%;
+    }
+    a p {
+      left: 15px;
+      top: 15px;
+      position: absolute;
+      z-index: 2;
+      color: $white;
+      background: $primary;
+      padding: 5px 24px;
+      border-radius: 30px;
+      box-shadow: 0 3px 6px #00000030;
+      font-size: 0.7rem;
+      font-weight: 700;
+    }
+     a:hover img {
+      transform: scale(1.07);
+    }
+  }
+  .swiper-pagination.d-block.d-md-none.swiper-pagination-bullets.swiper-pagination-horizontal {
+      bottom: 2px;
+  }
+}
+/*----------------------------Project-------------------------------*/
+.projecto{
+  background-image: url(../../assets/images/bigdata/fondod.png);
+  text-align: center;
+
+  p, h2, u{
+    color: $white;
+  }
+  .text.text-center {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &_logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    margin-bottom: 52px;
+    margin-top: 37px;
+    p {
+      margin-right: 10px;
+    }
+    img {
+      height: 22px;
+    }
+  }
+  &_down {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+    p {
+      margin: 0;
+    }
+  }
+}
+/*----------------------------Conatct-------------------------------*/
+.contact {
+  padding: 80px 0;
+    .h4{
+      margin-bottom: 22px;
+      font-weight: 600;
+    }
+    form#contactForm {
+      margin-bottom: 15px;
+      width: 90%;
+      .form-floating {
+        margin-bottom: 12px;
+        .form-control{
+          border: 1px solid #B7B1A5;
+        }
+      }
+    }
+    &_form2{
+      display: flex;
+      flex-direction: column;
+      a{
+        text-decoration: none;
+      }
+      a img {
+        width: 100%;
+        max-width: 35px;
+        margin-right: 18px;
+      }
+      .whatsapp {
+        font-size: 20px;
+        display: flex;
+        flex-direction: initial;
+        align-items: center;
+        margin-bottom: 20px;
+        color: $primary;
+      }
+    }
+    #formSending p.strong {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      span{
+        background: $primary;
+        height: 6px;
+        width: 6px;
+        border-radius: 100%;
+        margin: 0 3px;
+        animation: sending 1s infinite;
+      }
+      span:first-child {
+        margin-left: 6px;
+      }
+      span:nth-child(2) {
+        animation-delay: 200ms;
+      }
+      span:last-child {
+        animation-delay: 300ms;
+      }
+    }
+    .flor {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      max-width: 151px;
+      padding: 0;
+    }
+  }
+  @keyframes sending {
+  50% {
+    opacity: 0.5
+  }
+  100% {
+    opacity: 1
   }
 }

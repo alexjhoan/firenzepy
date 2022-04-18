@@ -13,9 +13,11 @@
   <meta name="keywords" content="Inmuebles, casas, apartamentos, proyectos inmobiliarios, terrenos, campos, oficina, alquiler, venta, revista" />
   <meta property="og:site_name" content="InfoCasas" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <link rel="preload" href="assets/lib/bootstrap/css/bootstrap.min.css" as="style">
   <link rel="stylesheet" href="assets/lib/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/lib/lightgallery/css/lightgallery.min.css">
   <link rel="preload" href="assets/lib/animate.min.css" as="style">
   <link rel="stylesheet" href="assets/lib/fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
   <script type="text/javascript" src="assets/lib/svg-inject.min.js"></script>
@@ -35,7 +37,7 @@
         <div class="col-12 wow fadeInLeft">
           <p class="mb-0" style="font-weight: 400">Dr. Cirilo Cáceres entre Papa Juan XXIII y Narciso R. Colman</p>
           <h1 class="mb-0">En el corazón del centro <br class="d-none d-md-block">Financiero de Asunción</h1>
-          <a href="#" class="btn btn-primary">Consultar</a>
+          <a href="#contacto" class="btn btn-primary">Consultar</a>
         </div>
       </div>
     </div>
@@ -217,7 +219,7 @@
           <div class="unidades_footer_text">
             <h5 class="mb-0">¡ASEGURÁ TU UNIDAD EN PREVENTA!</h5>
             <p class="fw-bold mb-4">Consultá precios y disponibilidad</p>
-            <a href="#contact" class="btn btn-primary">Solicitar información</a>
+            <a href="#contacto" class="btn btn-primary">Solicitar información</a>
           </div>
         </div>
         <div class="unidades_progress"></div>
@@ -241,10 +243,11 @@
       </div>
     </div>
   </section>
-   <section id="tipologias" class="tipologias d-none d-lg-block">
+   <!-- TODO: Replicar mismo efecto parallax y animaciones que en Munich. Son tres cambios: Monoambientes, 1 dormitorio y 2 dormitorios. Ya est hecho solo con dos imagenes-->
+  <section id="tipologias" class="tipologias d-none d-lg-block">
     <div class="tipologias_imgA1 tipologias_imgA"></div>
     <div class="tipologias_imgA2 tipologias_imgA"></div>
-   <!--  <div class="tipologias_imgA3 tipologias_imgA"></div> -->
+    <div class="tipologias_imgA3 tipologias_imgA d-lg-none d-block"></div>
     <div class="tipologias_text">
       <div class="container">
         <div class="row">
@@ -388,7 +391,6 @@
       </div>
     </div>
   </div>
-  <!-- TODO: agregar la funcionalidad de la 3era imagen -->
   <section id="tipologias" class="tipologias d-lg-none">
     <div class="swiper swiper-mpopup d-flex d-lg-none">
       <div class="swiper-wrapper">
@@ -448,11 +450,333 @@
       <div class="swiper-button-prev swiper-button-white"></div>
     </div>
   </section>
+  <section id="unitsGallery" class="unitsGallery">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="swiper gallery-top">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="assets/images/galeria/gal1.jpg" alt="" loading="lazy">
+                </div>
+                <div class="swiper-slide" >
+                  <img src="assets/images/galeria/gal2.jpg" alt="" loading="lazy">
+                </div>
+                <div class="swiper-slide" >
+                  <img src="assets/images/galeria/gal3.jpg" alt="" loading="lazy">
+                </div>
+                <div class="swiper-slide" >
+                  <img src="assets/images/galeria/gal4.jpg" alt="" loading="lazy">
+                </div>
+                <div class="swiper-slide" >
+                  <img src="assets/images/galeria/gal5.jpg" alt="" loading="lazy">
+                </div>
+                <div class="swiper-slide" >
+                  <img src="assets/images/galeria/gal6.jpg" alt="" loading="lazy">
+                </div>
+                <div class="swiper-slide" >
+                  <img src="assets/images/galeria/gal7.jpg" alt="" loading="lazy">
+                </div>
+                <div class="swiper-slide" >
+                  <img src="assets/images/galeria/gal8.jpg" alt="" loading="lazy">
+                </div>
+                <div class="swiper-slide" >
+                  <img src="assets/images/galeria/gal9.jpg" alt="" loading="lazy">
+                </div>
+                <div class="swiper-slide" >
+                  <img src="assets/images/galeria/gal10.jpg" alt="" loading="lazy">
+                </div>
+                <div class="swiper-slide" >
+                  <img src="assets/images/galeria/gal11.jpg" alt="" loading="lazy">
+                </div>
+              </div>
+              <!-- Add Arrows -->
+              <div class="swiper-button-next swiper-button-white"></div>
+              <div class="swiper-button-prev swiper-button-white"></div>
+            </div>
+            <div class="swiper gallery-thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="assets/images/galeria/gal1.jpg" alt="" loading="lazy">
+                </div>
+                <div class="swiper-slide" >
+                  <img src="assets/images/galeria/gal2.jpg" alt="" loading="lazy">
+                </div>
+                <div class="swiper-slide" >
+                  <img src="assets/images/galeria/gal3.jpg" alt="" loading="lazy">
+                </div>
+                <div class="swiper-slide" >
+                  <img src="assets/images/galeria/gal4.jpg" alt="" loading="lazy">
+                </div>
+                <div class="swiper-slide" >
+                  <img src="assets/images/galeria/gal5.jpg" alt="" loading="lazy">
+                </div>
+                <div class="swiper-slide" >
+                  <img src="assets/images/galeria/gal6.jpg" alt="" loading="lazy">
+                </div>
+                <div class="swiper-slide" >
+                  <img src="assets/images/galeria/gal7.jpg" alt="" loading="lazy">
+                </div>
+                <div class="swiper-slide" >
+                  <img src="assets/images/galeria/gal8.jpg" alt="" loading="lazy">
+                </div>
+                <div class="swiper-slide" >
+                  <img src="assets/images/galeria/gal9.jpg" alt="" loading="lazy">
+                </div>
+                <div class="swiper-slide" >
+                  <img src="assets/images/galeria/gal10.jpg" alt="" loading="lazy">
+                </div>
+                <div class="swiper-slide" >
+                  <img src="assets/images/galeria/gal11.jpg" alt="" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <section id="amenities1" class="amenities1">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="amenities1_title">
+            <img src="assets/images/flort.png" alt="">
+            <h2 class="mb-0">Toda una planta de amenities</h2>
+          </div>
+        </div>
+        <div class="col-lg-6 col-12">
+          <p>Torre Firenze ofrece amenities para que tu estancia sea un placer y disfrutes de toda la comodidad. Ambientes diseñados para actividades y espacios de reunión, totalmente equipados que te invitan a vivir grandes momentos.</p>
+        </div>
+      </div>
+    </div>
+    <div class="amenities1_img">
+      <img src="assets/images/amenities/amenities-d.png" alt="Firenze Asunción" class="d-none d-lg-block">
+      <img src="assets/images/amenities/amenities-d.png" alt="Firenze Asunción" class="d-block d-lg-none">
+    </div>
+  </section>
+  <section id="amenities2" class="amenities2">
+    <div class="container">
+      <div class="row amenities2_figure">
+        <div class="col-12 amenities2_icons wow fadeInUp">
+          <div class="amenities2_icons_frame">
+            <img src="assets/images/amenities/quincho.svg" alt="Austin" loading="lazy">
+            <p>Quincho<br>equipado</p>
+          </div>
+          <div class="amenities2_icons_frame">
+            <img src="assets/images/amenities/salon_gourmet.svg" alt="Austin" loading="lazy">
+            <p>Salón<br>Gourmet</p>
+          </div>
+          <div class="amenities2_icons_frame">
+            <img src="assets/images/amenities/piscina.svg" alt="Austin" loading="lazy">
+            <p>Piscina</p>
+          </div>
+          <div class="amenities2_icons_frame">
+            <img src="assets/images/amenities/solarium.svg" alt="Austin" loading="lazy">
+            <p>Solárium</p>
+          </div>
+          <div class="amenities2_icons_frame">
+            <img src="assets/images/amenities/gimnasio.svg" alt="Austin" loading="lazy">
+            <p>Gimnasio</p>
+          </div>
+          <div class="amenities2_icons_frame">
+            <img src="assets/images/amenities/laundry.svg" alt="Austin" loading="lazy">
+            <p>Laundry</p>
+          </div>
+          <div class="amenities2_icons_frame">
+            <img src="assets/images/amenities/estacionamiento.svg" alt="Austin" loading="lazy">
+            <p>Estacionamiento<br>bicis y scooters</p>
+          </div>
+          <div class="amenities2_icons_frame">
+            <img src="assets/images/amenities/cocheras.svg" alt="Austin" loading="lazy">
+            <p>Cocheras<br>opcionales</p>
+          </div>
+        </div>
+      </div>
+      <div class="row amenities2_iso">
+        <div class="col-12 wow fadeInUp">
+          <div class="fancyImgBox">
+            <div class="fancyBox">
+              <a href="assets/images/amenities/iso-parrilla.png" target="_blank" data-fancybox="gallery">
+                <div class="fancyImgItem">
+                  <img src="assets/images/amenities/iso-parrilla.png" loading="lazy" class="thumbnail" />
+                </div>
+              </a>
+              <div class="information">
+                <p class="titleFancyBox">PARRILLERO / TERRAZA</p>
+                <div><a href="assets/images/amenities/iso-parrilla.png" class="btn btn-primary"
+                  target="_blank" data-fancybox="gallery">Ampliar</a></div>
+              </div>
+            </div>
+            <div class="fancyBox">
+              <a href="assets/images/amenities/iso-gym.png" target="_blank" data-fancybox="gallery">
+                <div class="fancyImgItem">
+                  <img src="assets/images/amenities/iso-gym.png" loading="lazy" class="thumbnail" />
+                </div>
+              </a>
+              <div class="information">
+                <p class="titleFancyBox">GIMNASIO / SALÓN GOURMET</p>
+                <div><a href="assets/images/amenities/iso-gym.png" class="btn btn-primary" target="_blank" data-fancybox="gallery">Ampliar</a></div>
+              </div>
+            </div>
+            <div class="fancyBox">
+              <a href="assets/images/amenities/iso-piscina.png" target="_blank" data-fancybox="gallery">
+                <div class="fancyImgItem">
+                  <img src="assets/images/amenities/iso-piscina.png" loading="lazy" class="thumbnail" />
+                </div>
+              </a>
+              <div class="information">
+                <p class="titleFancyBox">PISCINA / SOLÁRIUM</p>
+                <div>
+                  <a href="assets/images/amenities/iso-piscina.png" class="btn btn-primary" target="_blank" data-fancybox="gallery">Ampliar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="bamenities" class="bamenities">
+    <div class="swiper-container swiper-amenities">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" >
+          <img src="assets/images/amenities/foto1.jpg" alt="" loading="lazy">
+        </div>
+        <div class="swiper-slide" >
+          <img src="assets/images/amenities/foto2.jpg" alt="" loading="lazy">
+        </div>
+        <div class="swiper-slide" >
+          <img src="assets/images/amenities/foto3.jpg" alt="" loading="lazy">
+        </div>
+      </div>
+      <div class="swiper-button-next swiper-button-white"></div>
+      <div class="swiper-button-prev swiper-button-white"></div>
+    </div>
+  </section>
+  <section id="avance" class="avance">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 wow fadeInUp">
+          <h2 class="text-center" style="font-weight: 600">Avance de obra</h2>
+          <div class="avance_line">
+            <img src="assets/images/avance/linea-desktop.svg" alt="Firenze Asunción" class="d-none d-lg-block" loading="lazy">
+            <img src="assets/images/avance/linea-mobile.svg" alt="Firenze Asunción" class="d-block d-lg-none" loading="lazy">
+          </div>
+          <div class="avance_icons-text">
+            <div class="item inic">
+              <img src="assets/images/avance/inicio-obra.svg" alt="Firenze Asunción" loading="lazy">
+              <p class="mb-0">Inicio de obra<br><span class="fw-bold">Marzo 2022</span></p>
+            </div>
+            <div class="item finish">
+              <img src="assets/images/avance/entrega.svg" alt="Firenze Asunción" loading="lazy">
+              <p class="mb-0">Entrega<br><span class="fw-bold">Octubre 2023</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="gallery" class="gallery">
+    <div id="lightgallery" class="wow slideInUp">
+        <a href="assets/images/advance/setiembre_2021_1.jpg" class="kids">
+          <img src="assets/images/advance/setiembre_2021_1.jpg" loading="lazy">
+          <p class="mb-0">Febrero 2022</p>
+        </a>
+        <a href="assets/images/advance/setiembre_2021_2.jpg" class="kids">
+          <img src="assets/images/advance/setiembre_2021_2.jpg" loading="lazy">
+          <p class="mb-0">Febrero 2022</p>
+        </a>
+        <a href="assets/images/advance/setiembre_2021_3.jpg" class="kids">
+          <img src="assets/images/advance/setiembre_2021_3.jpg" loading="lazy">
+          <p class="mb-0">Febrero 2022</p>
+        </a>
+        <a href="assets/images/advance/setiembre_2021_4.jpg" class="kids">
+          <img src="assets/images/advance/setiembre_2021_4.jpg" loading="lazy">
+          <p class="mb-0">Febrero 2022</p>
+        </a>
+    </div>
+      <div class="swiper-pagination d-block d-md-none"></div>
+  </section>
+  <section id="projecto" class="projecto">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="text-center wow fadeInDown fw-bold">Proyecto desarrollado con Big Data</h2>
+          <div class="projecto_logo wow fadeInDown">
+            <p class="mb-0">Powered by</p>
+            <img src="assets/images/bigdata/infocasasb.svg" alt="Firenze Asunción" loading="lazy">
+          </div>
+          <p class="text text-center wow fadeIn">Tomando como base el análisis de datos del <a href="https://www.infocasas.com.uy/" target="_blank"><u>Portal InfoCasas</u></a>, el proyecto fue concebido en cada uno de sus detalles según la demanda del mercado, abarcando desde la selección del terreno, hasta la composición de unidades y amenities, <span class="fw-bold">para lograr un proyecto innovador, con alta rentabilidad y atractivo tanto al público inversor como residencial.</span></p>
+          <div class="projecto_down wow fadeInUp">
+            <p><span class="h2 fw-bold">10 años</span><br />de datos de <br class="d-none d-md-block">mercado</p>
+            <p><span class="h2 fw-bold">+200.000</span><br />operaciones <br class="d-none d-md-block">analizadas por año</p>
+            <p><span class="h2 fw-bold">+150.000</span><br />propiedades <br class="d-none d-md-block">procesadas por año</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contacto" class="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="h4 wow fadeInLeft">Solicitá más información</h2>
+        </div>
+        <div class="col-12 col-lg-6 wow fadeInLeft">
+          <form id="contactForm" class="needs-validation" action="javascript:void(0);" novalidate>
+            <div class="form-floating">
+              <input type="text" class="form-control" placeholder="Nombre" name="name" required>
+              <label for="name">Nombre*</label>
+            </div>
+            <div class="form-floating">
+              <input type="email" class="form-control" placeholder="Email" name="email" required>
+              <label for="email">Email*</label>
+            </div>
+            <div class="form-floating">
+              <input type="tel" class="form-control" placeholder="Teléfono" name="phone" required>
+              <label for="name">Teléfono*</label>
+            </div>
+            <div class="form-floating">
+              <textarea class="form-control" name="consult" style="height: 110px" placeholder="Consulta" required></textarea>
+              <label for="consult">Consulta*</label>
+            </div>
+            <button class="btn btn-primary mt-3" type="submit" onclick="submited()">Enviar</button>
+          </form>
+          <div id="formSending" style="display: none;">
+            <p class="h3 strong">
+              Enviando
+              <span></span>
+              <span></span>
+              <span></span>
+            </p>
+          </div>
+          <div id="formSuccess" style="display: none;">
+            <p class="h3 strong">¡Consulta Enviada!</p>
+          </div>
+          <div id="formError" style="display: none;">
+            <p class="h3 strong">¡Error en el envio de su consulta.<br />Por favor intentar mas tarde!</p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 contact_form2 wow fadeInRight">
+          <p class="mb-0">Oficinas para trato personalizado en Argentina, Uruguay y Paraguay</p>
+          <p class="strong fw-bold mb-4">Coordiná una reunión virtual</p>
+          <a href="https://api.whatsapp.com/send?phone=595991689879&text=Hola,%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Firenze%20Asunci%C3%B3n" class="whatsapp fw-bold" target="_blank"><img src="assets/images/formulario/whatsapp.svg" loading="lazy">+595 991 689 879</a>
+          <div class="red-socials">
+            <a href="https://www.instagram.com/continentsred" class="whatsapp fw-bold" target="_blank"><img src="assets/images/formulario/instagram.svg" loading="lazy">@continentsred</a>
+          </div>
+        </div>
+        <div class="flor d-none d-lg-block">
+          <img src="assets/images/formulario/flor.png" alt="Firenze Asunción">
+        </div>
+      </div>
+    </div>
+  </section>
   <footer></footer>
 <script type="text/javascript" src="assets/lib/jquery.min.js"></script>
 <script type="text/javascript" src="assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="assets/lib/wow.min.js"></script>
 <script type="text/javascript" src="assets/lib/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="assets/lib/lightgallery/js/lightgallery.min.js"></script>
 <script type="text/javascript" src="assets/lib/fancybox/source/jquery.fancybox.pack.js"></script>
 <script type="text/javascript" src="assets/lib/chart.js"></script>
 <script type="text/javascript" src="assets/index.js"></script>
