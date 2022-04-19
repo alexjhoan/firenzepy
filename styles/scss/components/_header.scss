@@ -7,7 +7,7 @@ header{
   top: 0;
   box-shadow: 0px 5px 19px rgb(0 0 0 / 29%);
   img {
-    max-width: 160px;
+    max-width: 190px;
     width: 100%;
   }
   .header{
@@ -26,6 +26,7 @@ header{
     }
   }
   .navbar{
+    padding: 1rem 0;
     .navbar-nav .nav-link{
       color: $text;
     }

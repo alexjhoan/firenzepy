@@ -68,6 +68,17 @@ section {
     background-color: $white;
     border-color: $white;
 }
+.m_title{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    img{
+      max-width: 37px;
+      width: 100%;
+      margin-right: 10px;
+    }
+  }
 /*----------------------------Queries-------------------------------*/
 
 @media (max-width: 1399.98px) {}
