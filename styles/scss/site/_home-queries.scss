@@ -633,33 +633,26 @@
       }
     }
     &_flex-tecno{
-      margin-top: 32px;
+      margin-top: 48px;
       margin-bottom: 45px;
       justify-content: center;
       img {
         width: 45%;
       }
       img:first-child {
-        margin-right: 30%;
+        margin-right: 35%;
       }
       img:nth-child(2) {
         order: 3;
         margin-top: -35%;
         z-index: 2;
-        margin-right: 35%;
-        // order: 2;
-        // margin-right: 0;
-        // margin-left: 40%;
+        margin-right: 40%;
       }
       img:nth-child(3) {
         order: 2;
         margin-right: 0;
-        margin-left: 45%;
+        margin-left: 35%;
         margin-top: -20%;
-        // order: 3;
-        // margin-top: -40%;
-        // z-index: 2;
-        // margin-right: 30%;
       }
       img:nth-child(4) {
         margin-left: 35%;
@@ -888,8 +881,8 @@
           right: 12%;
         }
         &:nth-child(6){
-          top: 24%;
-          right: 9%;
+          bottom: -5%;
+          right: 11%;
         }
         &:last-child{
           bottom: 5%;
@@ -923,8 +916,65 @@
   .ubicacion3{
     .educations{
       span{
+        &:first-child {
+          bottom: 7.5%;
+          left: -2%;
+        }
         &:nth-child(2){
-          right: 28.5%;
+          right: 29.5%;
+        }
+        &:last-child {
+          bottom: 32%;
+          right: -3%;
+        }
+      }
+    }
+    .tours{
+      span{
+        &:first-child{
+          bottom: 19%;
+          left: 18.5%;
+        }
+        &:nth-child(2){
+          bottom: 26%;
+          left: 33.8%;
+        }
+        &:nth-child(3){
+          bottom: 26%;
+        }
+        &:nth-child(5){
+          top: 35%;
+          right: 15%;
+        }
+        &:nth-child(6){
+          bottom: -3%;
+          right: 12%;
+        }
+        &:nth-child(6){
+          bottom: -6%;
+          right: 11%;
+        }
+        &:nth-child(7) {
+          right: 9%;
+        }
+      }
+    }
+    .shopping{
+      span{
+        &:first-child{
+          bottom: -2%;
+          left: -4%;
+        }
+        &:nth-child(2){
+          bottom: 38.5%;
+        }
+        &:nth-child(3){
+          bottom: 18%;
+          left: 30%;
+        }
+        &:last-child{
+          bottom: 15%;
+          right: 40%;
         }
       }
     }
