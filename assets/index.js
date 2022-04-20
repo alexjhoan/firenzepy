@@ -91,7 +91,7 @@ $(window).scroll(function () {
   animations_tipologies_text()
   tipologies_imgA("#tipologias .tipologias_imgA1", "MONOAMBIENTES")
   tipologies_imgA("#tipologias .tipologias_imgA2", "1 DORMTORIO")
-  // tipologies_imgA("#tipologias .tipologias_imgA3", "2 DORMITORIOS")
+  tipologies_imgA("#tipologias .tipologias_imgA3", "2 DORMITORIOS")
 })
 
 function animations_tipologies_text(){
@@ -99,7 +99,7 @@ function animations_tipologies_text(){
   const heightElement = $(container).height()
   const heightTop = $(container).offset().top;
   const scroll = $(window).scrollTop();
-  if (scroll>heightTop && scroll<(heightTop + (heightElement /2 ))) {
+  if (scroll>heightTop && scroll<(heightTop + (heightElement / 1.5 ))) {
     $('.tipologias_text').css('position', 'fixed')
     if (scroll > heightTop + (heightElement / 3)) {
       $(".tipologias_text").css({"top": "auto", "bottom": "0" })
