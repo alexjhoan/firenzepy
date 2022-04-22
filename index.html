@@ -114,10 +114,9 @@
     <img src="assets/images/ubicacion/mano-m.png" alt="Firenze Asunción" class="ubicacion1_mano d-block d-lg-none" loading="lazy">
   </section>
   <section id="ubicacion2" class="ubicacion2">
-  <!-- TODO: Agregar video, primero debe cargar el JPG y solo empieza el Play cuando está en la sección. -->
-    <div class="video-img">
-      <img src="assets/images/ubicacion/portada-video.jpg" alt="Firenze Asunción" class="d-none">
-      <!-- <iframe src="https://www.youtube.com/embed/KgNBfc_Xf6s" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe> -->
+    <div class="video-img" id="player">
+      <img src="assets/images/ubicacion/portada-video.jpg" alt="Firenze Asunción">
+     <div id="ytplayer"></div>
     </div>
   </section>
   <section id="ubicacion3" class="ubicacion3">
@@ -243,7 +242,6 @@
       </div>
     </div>
   </section>
-   <!-- TODO: Replicar mismo efecto parallax y animaciones que en Munich. Son tres cambios: Monoambientes, 1 dormitorio y 2 dormitorios. Ya est hecho solo con dos imagenes-->
   <section id="tipologias" class="tipologias d-none d-lg-block">
     <div class="tipologias_imgA1 tipologias_imgA"></div>
     <div class="tipologias_imgA2 tipologias_imgA"></div>

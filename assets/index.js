@@ -90,7 +90,7 @@ var chart = new Chart(ctx, {
 $(window).scroll(function () {
   animations_tipologies_text()
   tipologies_imgA("#tipologias .tipologias_imgA1", "MONOAMBIENTES")
-  tipologies_imgA("#tipologias .tipologias_imgA2", "1 DORMTORIO")
+  tipologies_imgA("#tipologias .tipologias_imgA2", "1 DORMITORIO")
   tipologies_imgA("#tipologias .tipologias_imgA3", "2 DORMITORIOS")
 })
 
@@ -279,3 +279,89 @@ function submited() {
   }
   form.classList.add('was-validated')
 }
+
+//-----------------------------Detect element in viewport-------------------------------
+// Load the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/player_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// Replace the 'ytplayer' element with an <iframe> and
+// YouTube player after the API code downloads.
+var player;
+function onYouTubePlayerAPIReady() {
+  player = new YT.Player('ytplayer', {
+    height: '360',
+    width: '640',
+    videoId: 'KgNBfc_Xf6s',
+    playerVars: {
+      playlist: 'KgNBfc_Xf6s',
+      iv_load_policy: 3,
+      enablejsapi: 1,
+      disablekb: 1,
+      autoplay: 0,
+      controls: 0,
+      showinfo: 0,
+      origin: 'https://www.youtube.com',
+      rel: 0,
+      loop: 1,
+      wmode: "transparent"
+    },
+    events: {
+      onReady: function(event) {
+          event.target.mute().setLoop(!0);
+      }
+    }
+  });
+
+  function playVideo() {
+    player.playVideo();
+  };
+
+  function pauseVideo() {
+    player.pauseVideo();
+  };
+
+  $('#player')
+    .on("mouseenter", function() {
+      $(this).addClass('active-video')
+      playVideo()
+    })
+    .on("mouseleave", function() {
+      $(this).removeClass('active-video')
+      pauseVideo()
+    })
+
+
+
+  /*function isInViewportPlayer(){
+
+    var contentScroll = $(document).scrollTop();
+    var wndHeight = $(window).height();
+
+    var playerTop = $('#player').offset().top;
+    var playerHeight = $('#player').outerHeight();
+
+    // If player block on screen
+    if( playerTop <= contentScroll + wndHeight - (playerHeight/1.5) && playerTop + playerHeight >= contentScroll - (playerHeight/1.5) ){
+      $('#player').addClass('active-video')
+      playVideo()
+    } else {
+      pauseVideo()
+      $('#player').removeClass('active-video')
+    }
+    $('#player')
+  }
+
+  $(window).scroll(function () {
+    isInViewportPlayer()
+  });*/
+}
+
+
+
+
+
+
+
