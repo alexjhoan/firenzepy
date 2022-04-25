@@ -14,8 +14,16 @@
       justify-content: center;
       align-items: center;
     }
+    img.continents{
+      max-width: 160px;
+    }
+    img.solding{
+      max-width: 140px;
+    }
+    img.hub{
+      max-width: 75px;
+    }
     img {
-      max-width: 150px;
       width: 100%;
       max-height: 50px;
       height: 100%;

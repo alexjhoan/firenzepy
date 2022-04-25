@@ -89,9 +89,9 @@ var chart = new Chart(ctx, {
 //----------------------Animations-Typologies----------------------------
 $(window).scroll(function () {
   animations_tipologies_text()
-  tipologies_imgA("#tipologias .tipologias_imgA1", "MONOAMBIENTES")
-  tipologies_imgA("#tipologias .tipologias_imgA2", "1 DORMITORIO")
-  tipologies_imgA("#tipologias .tipologias_imgA3", "2 DORMITORIOS")
+  tipologies_imgA("#tipologias .tipologias_imgA1", "Monoambientes")
+  tipologies_imgA("#tipologias .tipologias_imgA2", "1 Dormitorio")
+  tipologies_imgA("#tipologias .tipologias_imgA3", "2 Dormitorios")
 })
 
 function animations_tipologies_text(){

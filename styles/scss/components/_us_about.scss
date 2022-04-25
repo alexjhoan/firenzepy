@@ -63,7 +63,7 @@
     }
   }
   .tam_proj {
-    padding: 0 12px;
+    padding: 0 10px;
   }
   .contentImg {
     position: relative;
@@ -75,7 +75,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-end;
-    box-shadow: 0px 3px 6px #00000029;
+    box-shadow: 4px 4px 6px #00000029;
     img {
       width: 100%;
       transition: all .5s ease;
@@ -157,6 +157,26 @@
     .tam_proj {
       padding: 0 30px;
     }
-
+    .contentImg {
+      img {
+        height: 270px;
+      }
+    }
+    .legendImg{
+      padding: 15px;
+      .line {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .imgLegend {
+        img {
+          max-width: 130px;
+          height: 40px;
+        }
+        p{
+          font-size: 12px;
+        }
+      }
+    }
   }
 }

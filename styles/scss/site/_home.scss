@@ -723,6 +723,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      img.bici{
+        max-width: 70px;
+      }
       img {
         max-width: 59px;
         height: 59px;

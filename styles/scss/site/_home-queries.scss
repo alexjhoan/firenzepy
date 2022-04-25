@@ -10,7 +10,7 @@
       }
     }
     img.imgleft {
-      max-width: 475px;
+      max-width: 487.5px;
       left: 58px;
     }
     &_logos{
@@ -102,7 +102,7 @@
       padding: 60px 30px;
     }
     img.imgleft {
-      max-width: 530px;
+      max-width: 541px;
     }
   }
   .ubicacion1{
@@ -288,6 +288,20 @@
       }
     }
   }
+  #myModal{
+    .modal-content .modal-body{
+      .swiper-wrapper .swiper-slide{
+        .col-right{
+          .img-right {
+            max-width: 270px;
+          }
+          .img-right.unik {
+            max-width: 250px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -306,11 +320,6 @@
       width: 100%;
       margin-top: 15px;
       margin-left: auto;
-    }
-  }
-  .ubicacion2{
-    iframe {
-      height: 80vh;
     }
   }
   .ubicacion3{
@@ -486,6 +495,9 @@
             .col-right{
               .img-right {
                 max-width: 200px;
+              }
+              .img-right.unik {
+                max-width: 220px;
               }
               .img-rightB{
                 margin-left: 10px;
