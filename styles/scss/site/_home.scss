@@ -44,7 +44,7 @@
       box-shadow: 7px 6px 28px #00000021;
     }
     img.logo{
-      max-width: 150px;
+      max-width: 175px;
       width: 100%;
       margin-bottom: 18px;
     }
@@ -87,6 +87,12 @@
       flex-direction: column;
       align-items: center;
       font-size: 0.8rem;
+    }
+    img.continents{
+      max-width: 150px;
+    }
+    img.hub{
+      max-width: 65px;
     }
     img{
       max-width: 110px;
@@ -170,11 +176,12 @@
     }
   }
   &_right{
-    position: absolute;
-    right: 0;
-    max-width: 560px;
-    padding-right:0;
-    top: 25%;
+    position: relative;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    max-width: 600px;
+    width: 100%;
     .active{
       span:hover *{
         opacity: 1;
@@ -231,7 +238,7 @@
         &::after{
           right: 30px;
         }
-        bottom: 15%;
+        bottom: 14%;
         left: 6%;
       }
       &:nth-child(2){
@@ -263,44 +270,44 @@
         &::after{
           right: 12px;
         }
-        bottom: 28%;
+        bottom: 25%;
         left: 26.5%;
       }
       &:nth-child(2){
-        bottom: 35%;
-        left: 40.8%;
+        bottom: 32%;
+        left: 39%;
       }
       &:nth-child(3){
         &::after{
           right: 35px;
         }
-        bottom: 35%;
-        left: 49%;
+        bottom: 32%;
+        left: 48%;
       }
       &:nth-child(4){
         &::after{
           bottom: 22px;
         }
-        bottom: 36.5%;
+        bottom: 34.5%;
         right: 27%;
       }
       &:nth-child(5){
-        top: 34%;
-        right: 20%;
+        top: 35.5%;
+        right: 19.5%;
       }
       &:nth-child(6){
         &::after{
           right: 28px;
         }
-        bottom: 3%;
-        right: 16%;
+        bottom: 0%;
+        right: 17%;
       }
       &:nth-child(7){
-        top:24%;
-        right: 13%;
+        top:25%;
+        right: 14%;
       }
       &:last-child{
-        bottom: 12%;
+        bottom: 9%;
         right: 1%;
       }
     }
@@ -315,12 +322,12 @@
         background-color: $secondary;
       }
       &:first-child{
-        bottom: 5%;
-        left: 2%;
+        bottom: 3%;
+        left: 1%;
       }
       &:nth-child(2){
-        bottom: 47.5%;
-        left: 34%;
+        bottom: 44.5%;
+        left: 32.5%;
       }
       &:nth-child(3){
         &::after{
@@ -328,11 +335,11 @@
           right: 20px
         }
         bottom: 27%;
-        left: 35%;
+        left: 34.5%;
       }
       &:last-child{
-        bottom: 24.5%;
-        right: 41%;
+        bottom: 22%;
+        right: 42%;
       }
     }
   }
