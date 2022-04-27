@@ -16,7 +16,7 @@ $(window).on('load', function () {
 
   })
 
-   $("header .nav-link").click(function (e) {
+   $(".linkTo").click(function (e) {
     e.preventDefault()
     $("header .collapse.show").removeClass("show")
     const url = $(this).attr("href")
