@@ -1,5 +1,5 @@
 $(window).on('load', function () {
-  $('body').css('opacity', '1');
+  $('#page').delay(100).css('opacity', '1');
 
   $(".edf-select").on("click touchstart" ,function () {
     const nameLevel = this.id.replaceAll('_',' ')
