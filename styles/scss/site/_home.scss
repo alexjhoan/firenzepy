@@ -831,7 +831,7 @@
 /*---------------------------Gallery-------------------------------*/
 .gallery{
   background-color: #F7F7F7;
-  padding-bottom: 27px;
+  padding-bottom: 0;
   padding-top: 0;
   #lightgallery {
     display: grid;
@@ -865,14 +865,23 @@
   .swiper-pagination.d-block.d-md-none.swiper-pagination-bullets.swiper-pagination-horizontal {
       bottom: 2px;
   }
+  .swiper-pagination-bullet-active, .swiper-pagination-bullet  {
+    background: white;
+  }
 }
 /*----------------------------Project-------------------------------*/
 .projecto{
   background-image: url(../../assets/images/bigdata/fondod.png);
+  background-position: center;
+  padding-top: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
-
   p, h2, u{
     color: $white;
+  }
+  h2{
+    padding-top: 8vh;
   }
   .text.text-center {
     width: 75%;
